@@ -1,3 +1,5 @@
+
+
 //1. create the constructor
 function User(email,password,fName,lName,age,g1,g2,g3){
     this.email=email; //*
@@ -23,11 +25,11 @@ function isValid(aUser){
     input103.classList.remove("alert-error");
 // create if input is empty then add the class alert 
     if(aUser.email==""){
-        validdation=false;
+        validation=false;
         inputEmail.classList.add("alert-error");
     };
     if(aUser.password==""){
-        validdation=false;
+        validation=false;
         inputPass.classList.add("alert-error");
     };
     if(aUser.fName==""){
@@ -35,17 +37,19 @@ function isValid(aUser){
         inputfName.classList.add("alert-error");
     };
     if(aUser.g1==""){
-        validdation=false;
+        validation=false;
         input101.classList.add("alert-error");
     };
     if(aUser.g2==""){
-        validdation=false;
+        validation=false;
         input102.classList.add("alert-error");
     };
     if(aUser.g3==""){
-        validdation=false;
+        validation=false;
         input103.classList.add("alert-error");
     };
+
+    return validation;
 
 }
 
@@ -64,12 +68,15 @@ function register(){
     let user = new User(inputEmail,inputPass,inputFName,inputLName,inputAge,input101,input102,input103);
     // 4. display it on the console
     console.log(user);
+    saveUser(user);
+    // call validation function
+    
 }
 
 function init(){
 //jQ find the button by id and when clicked call the function
-    $(`#registerBtn`).click(register());
-    console.log("registering...")
+    $(`#registerBtn`).click(register);
+    console.log( "registering...")
 }
     // 2. trigger the btnRegister and execute the register 
 
