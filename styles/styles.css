@@ -5,8 +5,22 @@
 }
 
 /* utilities */
-.alert-error{
-    background-color: red;
+.container{
+    width: 70%;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
 }
+/* .alert-error{
+    background-color: red;
+}; */
 
 /* registration */
+.site-header{
+    background-color: rgba(55, 0, 255, 0.739);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

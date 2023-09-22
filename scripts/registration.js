@@ -12,12 +12,23 @@ function User(email,password,fName,lName,age,g1,g2,g3){
     this.g3=g3; //*
     //this.id=x++ // automatically asign id so we can delete later if we need
 };
-// create validation function
 
+// create input const vars to reuse them to clear or validate
+
+const inputEmail = $("#txtEmail");
+const inputPass = $("#txtPass");
+const inputFName = $("#txtFName");
+const inputLName = $("#txtLName");
+const inputAge = $("#txtAge");
+const input101 = $("#txt101");
+const input102 = $("#txt102");
+const input103 = $("#txt103");
+
+// create validation function
 function isValid(aUser){
     let validation = true; // assuming all is fine
     // if all fine remove allert
-    inputEmail.classList.remove("alert-error");
+    inputEmail.removeClass("alert-error");
     inputPass.classList.remove("alert-error");
     inputFName.classList.remove("alert-error");
     input101.classList.remove("alert-error");
@@ -26,28 +37,28 @@ function isValid(aUser){
 // create if input is empty then add the class alert 
     if(aUser.email==""){
         validation=false;
-        inputEmail.classList.add("alert-error");
-    };
+        $("#txtEmail").addClass("alert-error");
+    }
     if(aUser.password==""){
         validation=false;
         inputPass.classList.add("alert-error");
-    };
+    }
     if(aUser.fName==""){
-        validdation=false;
-        inputfName.classList.add("alert-error");
-    };
+        validation=false;
+        inputFName.classList.add("alert-error");
+    }
     if(aUser.g1==""){
         validation=false;
         input101.classList.add("alert-error");
-    };
+    }
     if(aUser.g2==""){
         validation=false;
         input102.classList.add("alert-error");
-    };
+    }
     if(aUser.g3==""){
         validation=false;
         input103.classList.add("alert-error");
-    };
+    }
 
     return validation;
 
